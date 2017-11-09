@@ -1,0 +1,151 @@
+.service,.service-detail,.service-comment{
+    img{ .dp; max-width: 100%;}
+    .mui-btn, button, input[type=button], input[type=reset], input[type=submit]{ .fs(.7rem);.bd(1px,solid,#333);color:#333;.p(.2rem .4rem)}     
+}
+.service{
+    .filter-option-list{
+        text-align: center;
+        .fs(.8rem);
+        .bb(1px,#eee,solid);
+        .dp(flex);
+        .mb(.2rem);
+        position: relative;
+        z-index: 3;
+    }
+    .filter-option{
+        width: 50%;background: url([@sitepath]images/service/arrow-icon.png) no-repeat 65% center #fff; background-size: auto 20%;position: relative;.lh(2rem)        
+    }
+    .filter-option a{
+        .dp; .br(1px,#eee,solid);.lh(2rem) 
+    }
+    .filter-option.zt{background: url([@sitepath]images/service/arrow-icon.png) no-repeat 70% center #fff; text-indent: -.5rem;background-size: auto 20%;}
+    .filter-option.zt.cur{ background-image: url([@sitepath]images/service/arrow-icon-red.png); color: #f00}
+    .tab-item-select{ .dp(none); position: absolute; top: 2rem; right: 0; width: 18.75rem; background: #fff; text-indent: 0;.bt(1px,#eee,solid);}
+    .filter-option.zt.cur .tab-item-select{ display: block}
+    .tab-item-select {
+        ul{ .p(.1rem .7rem) }
+        li{
+            .dp(block);.lh(1.8rem);.fs(.7rem);text-align:left;.bb(1px,solid,#eee); color:#333;
+        }
+        li.selected{
+            color: #f00; background: url([@sitepath]images/service/right1.png) no-repeat right center #fff;background-size: auto 30%;
+        }
+        li:last-child{border-bottom:none}
+    }
+    .sevice-list{ position: relative; z-index: 2;}
+    .sevice-list {
+        li{ .dp(block); background: #fff; .p(.4rem .7rem); .mb(.4rem)}
+        .server-no{ .fs(.7rem); color: #777; .bb(1px,#eee,solid); .pb(.2rem)}
+        .szt{ color:#f00; float: right}
+        .device-info{ .p(.7rem 0 .2rem)}
+        .device-info {
+            p{ .fs(.7rem); margin-bottom: .3rem;color:#777; .lh(.8rem)}
+            p.device-name{ .fs(.8rem);.lh(1rem); color: #000; width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden}
+            p.fault-desc{max-height: 1.6rem ;width: 100%;overflow: hidden}        
+        }
+        .server-end-info{ color: #777; .fs(.7rem);.lh(1rem);height: 1.2rem}
+        .end-time{ .dp(inline-block)}
+        .comment-btn{ float: right; color:#f00; .bd(1px,solid,#f00); .p(0 .3rem)}
+    }
+    .mask{
+        background:rgba(0,0,0,.6);position:fixed;top:0;left:0;width:100%;height:100%; .bt(1px,solid,#eee); z-index: 2; .dp(none)
+    }
+    .device-list{ position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; background: #fff; z-index: 5;.dp(none)}
+    .device-list{
+        li{ .p(.65rem .5rem);.bt(1px,solid,#eee); .dp(flex);}
+        li .device-img{ width: 4.3rem; height: 3.6rem;.mr(.5rem)}
+        .text{width:11rem}
+        .text{
+            .device-name{.fs(.75rem);.pb(.2rem);color:#000;.lh(1.2rem)}
+            .device-no{.pb(.2rem);}
+        }
+        li.cur{
+            background: url([@sitepath]images/service/right1.png) no-repeat 95% center; background-size: auto 15%;
+        }
+    }
+}
+.service-detail{
+    .device-title-info{
+        .p(.65rem .5rem);background: #fff;.dp(flex)
+    }
+    .device-title-info{
+        img{ width: 3.5rem; height: 2.96rem; }
+        .title{ width: 14.2rem; .ml(.5rem); .lh(.96rem)}
+        .device-name{ width: 100%; .fs(.8rem); color:#333; .lh(1.6rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+    }
+    .col{.fs(.75rem);}
+    .col h2{.fs(.8rem); .lh(1.6rem); color:#888; text-indent: .5rem}
+    .service-info,.service-progress{ .p(.65rem .5rem); background: #fff}
+    .service-info{
+        td{.p(.2rem 0)}
+        tr td:first-child{
+             color: #888; width: 4.4rem; vertical-align: top
+        }
+        .mui-row{ .pt(.65rem)}
+        .mui-col-xs-3{ .p(0 .2rem)}
+    }
+    .service-progress{
+        tr td{vertical-align: top; .pb(.8rem)}
+        tr:last-child td{ .pb(0)}
+        tr td:first-child{
+            width: 1.5rem; position: relative;
+        }
+        .nodeTag{position: relative; z-index: 2; background: #f00; text-align: center; .dp(block); border-radius: 100%; width: 1rem; .lh(1rem); color: #fff;.fs(.6rem)}
+        .nodeTag.order-taking{ background: #fff;}
+        .line{.dp(block); width: 0; z-index: 1; position: absolute; left:.4rem; top:.1rem; height: 100%; .bl(.2rem,#f00,solid); }
+        tr:last-child .line{ .dp(none)}
+        p.title{.fs(.75rem); color: #000}
+        p.title span{.dp(inline-block);color:#f00; }
+        p.time{.lh(1.4rem);}        
+    }
+    a.btn{.dp; width: 100%; .lh(2rem); .mt(.3rem);  text-align: center; background: #f00; font-size: .8rem; color:#fff}
+    p img {
+        max-width: 100%;
+        height: auto;
+    }
+    .mui-slider-img-content {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        color: white;
+        text-align: center;
+        line-height: 21px
+    }
+}
+
+.service-comment{
+    .grade,.img-picker{
+        background: #fff; text-align: center;.p(1rem);.mb(.5rem)
+    }
+    .grade{
+        .title{
+            .fs(.75rem); color: #333; .pb(.5rem) 
+        }
+        .stars{
+            li{
+                .dp(inline-block); width: 1.4rem; height: 1.4rem; background: url([@sitepath]images/service/star.png) no-repeat center; background-size: 100%; .m(0 .2rem);
+            }
+            li.s{
+                background: url([@sitepath]images/service/star2.png) no-repeat center; background-size: 100%; animation: fadeIn 1s ;
+            }
+        }
+    }
+    .img-picker{ .p(.65rem .5rem .65rem 0)}
+    .img-picker{
+        .mui-col-xs-3{ .pl(.5rem)}
+    }
+    .text{
+        textarea{ border:none; height: 7.5rem; .lh(.8rem); .fs(.7rem)}
+    }
+    button.btn{.dp; border-radius: 0; position: absolute; bottom:0; left: 0; width: 100%; .lh(2rem); .mt(.3rem); .bd(0);  text-align: center; background: #f00; font-size: .8rem; color:#fff}
+    @keyframes fadeIn {
+        0%{opacity: 0; }
+        100%{opacity: 1; }
+    }
+    @-webkit-keyframes fadeIn {
+        0%{opacity: 0; }
+        100%{opacity: 1; }
+    }
+}
+

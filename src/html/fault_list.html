@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--include "./modules/commoncss.html"-->
+</head>
+<body>
+<div class="page fault-list">
+    <!--页面内容开始-->
+    <div class="fault-search">
+        <h2>SY315C常见故障及问题(324)</h2>
+        <div class="fault-ipn clearfix">
+            <div class="fau-l">
+                <input type="text" class="mui-input-clear" placeholder="搜索故障问题">
+                <div class="serch-ico">
+                    <img src="[@sitepath]images/fault/search.png">
+                </div>
+            </div>
+            <div class="fau-r">
+                <button type="button" class="mui-btn mui-btn-outlined">搜索</button>
+            </div>
+        </div>
+    </div>
+    <div class="fault-eq">
+        <!--<div class="eq-list">
+            <a href="#">
+                <h2>泵车臂架不能联合动作故障</h2>
+                <p>
+                    联合动作转臂和其他任何臂架展开或收回时，相应多路阀手臂动作，可以排除电器方面故障。单独操作
+                </p>
+                <ul class="clearfix">
+                    <li>
+                        <img src="[@sitepath]images/fault/pic-1.jpg">
+                    </li>
+                    <li>
+                        <img src="[@sitepath]images/fault/pic-1.jpg">
+                    </li>
+                    <li>
+                        <img src="[@sitepath]images/fault/pic-1.jpg">
+                    </li>
+                    <li>
+                        <img src="[@sitepath]images/fault/pic-1.jpg">
+                    </li>
+                </ul>
+            </a>
+        </div>-->
+    </div>
+    <!--页面内容结束-->
+</div>
+<!--include "./modules/commonjs.html"-->
+<!--<script src="[@sitepath]js/common.min.js"></script>-->
+<script src="[@sitepath]js/fault.min.js"></script>
+<script src="[@sitepath]vendor/template/template-native.js"></script> <!-- 模板引擎 -->
+<script type="text/template" id="template-fault">
+    <% for(var i=0; i < faultItems.length; i++){%>
+    <div class="eq-list">
+        <a href="#">
+            <h2><%=faultItems[i].title%></h2>
+            <p>
+                <%=faultItems[i].detail%>
+            </p>
+            <ul class="clearfix">
+                <% for(var j=0;j< faultItems[i].images.length;j++){%>
+                <li>
+                    <img src="<%=faultItems[i].images[j].url%>">
+                </li>
+                <%}%>
+            </ul>
+        </a>
+    </div>
+    <%}%>
+
+</script>
+</body>
+</html>

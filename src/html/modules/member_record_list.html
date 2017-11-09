@@ -1,0 +1,28 @@
+<div class="member-record">
+    <div class="mui-content">
+        <ul class="mui-table-view record-table-view">
+            <!-- 利用模板动态生成元素 -->
+        </ul>
+    </div>
+</div>
+
+<script src="[@sitepath]vendor/template/template-native.js"></script> <!-- 模板引擎 -->
+
+
+<!-- 定义模板 -->
+<script type="text/template" id="template-member-record">
+    <% for(var i=0;i<recordItems.length;i++){%>
+        <%if(recordItems[i].type == 1) { %>
+        <li class="mui-table-view-divider record-divider"><%=recordItems[i].title%></li>
+        <%}else{%>
+        <li class="mui-table-view-cell mui-media record-table-view-cell">
+            <a class="mui-navigate-right record-navigate-right" data-text="<%=recordItems[i].data%>">
+                <div class="mui-media-body record-media-body">
+                    <p class="mui-ellipsis record-ellipsis"><%=recordItems[i].info%></p>
+                    <p class="record-time"><%=recordItems[i].time%></p>
+                </div>
+            </a>
+        </li>
+        <%}%>
+    <%}%>
+</script>

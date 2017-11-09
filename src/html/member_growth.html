@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--include "./modules/commoncss.html"-->
+</head>
+<body>
+<div class="page">
+    <!--页面内容开始-->
+    <div class="member growth">
+        <div class="member-growth-header">
+            <div class="member-growth-header-img">
+                <img src="[@sitepath]images/member/member-binding@3x.png" alt="">
+            </div>
+            <h4>铜牌会员</h4>
+            <span>231成长值</span><br>
+            <p>还差200成长值即可成为银牌会员</p>
+        </div>
+        <div class="member-container">
+            <ul class="member-tab clearfix">
+                <li class="tab-item active">成长任务<span></span></li>
+                <li class="tab-item">成长记录<span></span></li>
+            </ul>
+            <div class="member-list">
+                <div class="member-main selected">
+                    <!--include "./modules/member_task_list.html"-->
+                </div>
+                <div class="member-main">
+                    <!--include "./modules/member_record_list.html"-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页面内容结束-->
+</div>
+<!--include "./modules/commonjs.html"-->
+<script src="[@sitepath]js/member.min.js"></script>
+</body>
+</html>

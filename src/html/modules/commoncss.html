@@ -1,0 +1,11 @@
+<script>
+    (function() {
+        window.onload = window.onresize = function () {
+            var r=20 * document.documentElement.clientWidth / 375;
+            r=r>40?40:r;
+            document.documentElement.style.fontSize = r + 'px'
+          };
+    })();
+</script>
+<link rel="stylesheet" href="[@sitepath]vendor/mui/css/mui.min.css">
+<link rel="stylesheet" href="[@sitepath]css/main.min.css"/>

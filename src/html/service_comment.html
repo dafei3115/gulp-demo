@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工单评价</title>
+    <!--include "./modules/commoncss.html"-->
+</head>
+<body>
+<div class="page service-comment">
+<!--页面内容开始-->
+<form>
+    <input type="hidden" id="score" name="score" value="2">
+    <input type="hidden" id="imgUrl"  name="imgUrl" >
+    <div class="grade">
+        <p class="title">满意度评分</p>
+        <div class="stars">
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="img-picker">
+            <div class="mui-row">   
+                <div class="mui-col-xs-3"><img src="[@sitepath]images/service/add.png"></div>
+            </div>
+    </div>
+    <div class="text">
+        <textarea name="text" placeholder="评价内容（需要5字以上）"></textarea>
+    </div>
+    <button type="button" class="btn">提交评价</button>
+</form>
+<!--页面内容结束-->
+</div>
+<!--include "./modules/commonjs.html"-->
+<script src="[@sitepath]js/service_comment.min.js"></script>
+</body>
+</html>

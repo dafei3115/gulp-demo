@@ -1,0 +1,261 @@
+.device{
+
+  
+  font-size:.7rem;
+  
+  .p();
+  .m();
+
+  .ma{
+    margin:0 auto;
+  }
+  
+  text-align:center;
+
+  .display(@display:inline-block){
+    display:@display;
+  }
+
+  .ver-center(@height){
+    height:@height;
+    line-height:@height;
+  }
+
+  .fs(@size:.7rem){
+    font-size:@size;
+  }
+
+  .color(@color:#888){
+    color:@color;
+  }
+
+  .left{
+  	float:left;
+  }
+
+  .right{
+    color:#888888;
+  	float:right;
+  }
+
+  .display(@display){
+    display:@display;
+  }
+
+   .ver_center(@height){
+      height:@height;
+      line-height:@height;
+  }
+
+  #edit{
+    .pl(1.35rem);
+    .fs(.8rem);
+    .color(#888);
+    .display(none);
+  }
+
+  #edit input{
+    .p();
+    border:solid 0px #888;
+  }
+
+ 
+
+  .bg(@color){
+    background-color:@color;
+  }
+
+  .title{
+  	text-align:justify;
+    .fs(0.8rem);
+    color:#353535;
+    .bg(white);
+  	.pl(0.8rem);
+  	.pr(0.5rem);
+    .ver_center(2.45rem);
+    .ma();
+  }
+
+  .title .left,.title .right{
+    .ver_center(2.45rem);
+  }
+
+  .arrow{
+      vertical-align:middle;
+      display:inline-block;
+      .ml(0.5rem);
+      height:.65rem;;
+  }
+
+  .del-btn{
+      .mt(1.5rem);
+      width:17.15rem;
+      .bg(#ef2e32);
+      color:#fff;
+      height:2.45rem;
+      .fs(0.9rem);
+      border-radius:6px;
+      border:solid 0px red;
+  }
+
+  .device-top{
+      background-color:#fff;
+      padding:.65rem .5rem;
+      position:relative;
+      height:5rem;
+  }
+
+  .img-container{
+      width:4.35rem;
+      height:3.7rem;
+  }
+
+  .img-container img{
+      width:100%;
+      height:100%;
+  }
+
+  .num-container{
+      text-align:left;
+      .ml(0.5rem);
+  }
+
+  .device-name{
+      .fs(.8rem);
+      .color(#353535);
+      .m();
+  }
+
+  .device-num{
+      .fs(.7rem);
+      .color(#888);
+      .mt(.4rem);
+  }
+
+  .device-authen{
+      position:absolute;
+      bottom:0;
+      .mb(.65rem);
+  }
+
+  .auth(@color){
+      .display();
+      .fs(.55rem);
+      border:solid 1px @color;
+      border-radius:2px;
+      padding:1.5px 1.5px;
+      .color(@color);
+  }
+
+  .device-info-green{
+      .auth(#09bb07);
+  }
+
+  .device-info-red{
+      .auth(#ef2d32);
+  }
+
+  .worktime{
+      .bg(#FAFAFB);
+      padding:.5rem 0;
+      .fs(.6rem);
+      .pl(.5rem);
+  }
+
+  .worktime p{
+      .display();
+      width:30%;
+      .m();
+      text-align:center;
+      .fs();
+  }
+
+  .worktime p span{
+     .display();
+      margin-top:.25rem;
+  }
+
+  .black{
+      .color(#353535);
+      .fs(.8rem);
+  }
+
+  .local{
+      .ver-center(2.45rem) !important;
+      margin:.5rem 0;
+      .fs(.8rem);
+      .pl(.5rem);
+      background:url(../images/device/arrow.png) no-repeat 18rem center;
+      .bg(#fff);
+      .pr(1.5rem);
+      display:-webkit-flex;
+      display:flex;
+      justify-content:space-between;
+  }
+
+  .local span{
+      .ver-center(2.45rem) !important;
+  }
+
+  .local .addr{
+     width: 12rem;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     display:block;
+     .color(#888);
+  }
+
+   .url{
+      background:url(../images/device/arrow.png) no-repeat 18rem center;
+    }
+
+  .param-list li{
+     padding:0 .5rem;
+    .ver-center(2.45rem) !important;
+    .bg(#fff);
+    .fs(.8rem);
+    .color(#353535);
+    display:-webkit-flex;
+    display:flex;
+    justify-content:space-between;
+  }
+
+  .param-list li p span{
+    .ver-center(2.45rem) !important;
+  }
+
+  .param-list p{
+    .color(#353535);
+    .fs(.8rem);
+    width:100%;
+    height:100%;
+    display:-webkit-flex;
+    display:flex;
+    justify-content:space-between;
+    
+  }
+
+  .param-list .param{
+    .ver-center(1.7rem) !important;
+    .bg(#EFEFF4);
+    .color(#888);
+    .fs(.7rem);
+  }
+
+  .param-list .bt{
+    border-bottom:solid 1px #E4E9EA;
+  }
+
+ 
+
+  .param-list li .value{
+    .color(#888);
+  }
+
+
+
+
+
+
+}

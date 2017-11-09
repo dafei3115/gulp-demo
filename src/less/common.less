@@ -1,0 +1,86 @@
+/*基本公用start*/
+/*文字排版、颜色*/
+.fs(@num:12px) {
+  font-size: @num;
+}
+.lh(@num:24px) {
+  line-height: @num;
+}
+.fw(@num:bold){
+  font-weight: @num;
+};
+/*定位*/
+.hidden {
+  visibility: hidden;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+/*边距*/
+.m(@num:0) {
+  margin: @num;
+}
+.mt(@num:0) {
+  margin-top: @num;
+}
+.mb(@num:0) {
+  margin-bottom: @num;
+}
+.ml(@num:0) {
+  margin-left: @num;
+}
+.mr(@num:0) {
+  margin-right: @num;
+}
+.p(@num:0) {
+  padding: @num;
+}
+.pt(@num:0) {
+  padding-top: @num;
+}
+.pb(@num:0) {
+  padding-bottom: @num;
+}
+.pl(@num:0) {
+  padding-left: @num;
+}
+.pr(@num:0) {
+  padding-right: @num;
+}
+.bt(@num:1px,@color:#000,@style:solid){
+  border-top : @num @color @style;
+}
+.bl(@num:1px,@color:#000,@style:solid){
+  border-left : @num @color @style;
+}
+.br(@num:1px,@color:#000,@style:solid){
+  border-right :@num @color @style;
+}
+.bb(@num:1px,@color:#000,@style:solid){
+  border-bottom : @num @color @style;
+}
+.bd(@num:1px,@color:#000,@style:solid){
+  border : @num @color @style;
+}
+.dp(@dis:block){
+  display: @dis
+}
+/*基本公用end*/
+/*rewrite start*/
+html{ -webkit-tap-highlight-color:rgba(0,0,0,0);}
+*{ padding:0; margin:0; font-family: "Microsoft Yahei",arial; .lh(1.2)}
+h1,h2,h3,h4,h5,h6{ font-weight:normal; }
+a{ color:#000; text-decoration:none;}
+ul,ol,dl,dt,dd{ list-style:none;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+a img{ border:none;}
+img{ vertical-align:top;}
+.clearfix:after{ display:block; content:''; clear:both;} 
+/*rewrite end*/
+body{.bt(1px,solid,#eee)}
+.page{ width: 18.75rem; margin:0 auto;}
+p{ .mb(0);.fs(.7rem)}

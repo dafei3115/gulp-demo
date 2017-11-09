@@ -1,0 +1,387 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+.maintenance{
+  position: relative;
+  @pplr:0.8rem;   //页面的左右padding 32px
+  @ptb:12px;    //每一行的上下padding
+  @pbg:#f4f4f5;//页面背景色
+  @white:#fff;
+  @darkblack:#353535;//字体深色
+  @nfs:0.8rem;  //字体大小  32
+  @row-height:1.65rem; //每行的高度66px
+  @slit-line-c:#e9e9eb; //水平分割线的颜色
+  @row-marg:0.5rem;  //行之间的间隔20px
+  @tiptilecolor:#888888;//提示的标题颜色
+  @b-row-height:2.45rem;  //最底部的按钮高度
+  @tiptilefs:0.6rem; //提示字体大小 24px
+  @tip-font-size:0.7rem;//28px
+
+  width: 100%;
+  height: 100%;
+  background: @pbg;
+
+  .helper{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+
+    .top-curr-device{
+      z-index: 1000;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      padding: 0px @pplr;
+      box-sizing: border-box;
+      background: @white;
+      white-space: nowrap;
+      display: flex;
+
+      label,.device{
+        color: @darkblack;
+        font-size: @nfs;
+        height: @row-height;
+        line-height: @row-height;
+        vertical-align: middle;
+      }
+
+      .device{
+        flex: 1;
+        display: inline-block;
+        overflow-x:hidden;
+        height: @row-height;
+        line-height: @row-height;
+        vertical-align: middle;
+      }
+    }
+
+    .bottom-maintenance-manual{
+      z-index: 1000;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      padding-top:@row-marg;
+      box-sizing: border-box; 
+
+      .btn-maintenance-manual{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: @b-row-height;
+        line-height: @b-row-height;
+        vertical-align: middle;
+        background: @white;
+        border: none;
+        outline: none;
+        padding: 0px @pplr;
+        color: @darkblack;
+        text-align: left;
+        font-size: @nfs;
+
+        &::after{
+          @iconw:10px;
+          @iconh:18px;
+
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: @pplr;
+          background: url('../images/maintenance/nexticon.png');
+          background-size: @iconw @iconh;
+          width: @iconw;
+          height: @iconh;
+        }
+      }
+    }
+
+    .full-page{
+      width: 100%;
+      height: 100%;
+      padding: @row-height 0px;
+      padding-bottom: @b-row-height+@row-marg;
+      box-sizing: border-box;
+
+      .mid-content{
+        z-index: 10;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        
+        
+        .curr-device-hr{
+          width: 100%;
+          height: 1px;
+          background: @slit-line-c;
+          padding: 0px;
+          margin: 0px;
+          border: none;
+          outline: none;
+        }
+
+        .curr-maintenance-node{
+          @plr:16px;
+
+          width: 100%;
+          background: @white;
+          margin-top: @row-marg;
+          padding: 1rem 0px 0px 0px;
+          box-sizing: border-box;
+
+          .full-title{
+            @font-color:#3793d3;
+
+            width: 100%;
+            height: 20px;
+            padding: 0px @pplr;
+            box-sizing: border-box;
+            display: flex;
+            align-items:center ;
+
+            .l-h-line,.r-h-line{
+              flex: 1;
+              margin: 0px;
+              border: 0px;
+              height: 1px;
+              padding: 0px;
+            }
+
+            .l-h-line{
+              background: linear-gradient(to left,@font-color, #fff);
+            }
+
+            .r-h-line{
+              background: linear-gradient(to right,@font-color, #fff);
+            }
+
+            label{
+              color: @font-color;
+              padding: 0px 0.5rem;
+            }
+          }
+
+          .ref-node,.cur-node{
+            width: 100%;
+            display: flex;
+            padding: 0px @pplr;
+            box-sizing: border-box;
+
+            li{
+              flex: 1;
+              justify-content: center ;
+              padding: 16px 0px;
+              box-sizing: border-box;
+
+              .tip{
+                color: @tiptilecolor;
+                font-size: @tiptilefs;
+              }
+
+              .data{
+                color: @darkblack;
+                font-size: 0.9rem;//36px
+              }
+
+              div{
+                text-align: center;
+              }
+            }
+          }
+        
+          .gap{
+            width: 100%;
+            height: 1rem;
+            background:@pbg; 
+          }
+          .cur-node{
+            li{
+              padding-top: 0px;
+            }
+          }
+        }
+
+        .need-maintenance-project{
+          
+
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          .tip-title{
+            vertical-align: middle;
+            font-size: @tip-font-size;
+            color: @tiptilecolor;
+            padding: 0.5rem @pplr;
+            box-sizing: border-box;
+          }
+
+          .project{
+            flex: 1;
+            overflow-y: scroll;
+            background: @white;
+            width: 100%;
+            padding: 0px @pplr;
+            box-sizing: border-box;
+
+            .item{
+              padding-top: 16px;
+
+              &:last-child{
+                padding-bottom: 16px;
+              }
+
+              .name{
+                color: @tiptilecolor;
+                font-size: @tip-font-size;
+              }
+
+              ul{
+                li{
+                  padding: 0px;
+                  color: @darkblack;
+                  
+                  &:first-child{
+                    font-size: 0.8rem;//32px
+                  }
+
+                  &:not(:first-child){
+                    font-size: 0.7rem;  //28px
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .manual{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+
+    .top-curr-device{
+      z-index: 1000;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      padding: 0px @pplr;
+      box-sizing: border-box;
+      background: @white;
+      white-space: nowrap;
+      display: flex;
+
+      label,.device{
+        color: @darkblack;
+        font-size: @nfs;
+        height: @row-height;
+        line-height: @row-height;
+        vertical-align: middle;
+      }
+
+      .device{
+        flex: 1;
+        display: inline-block;
+        overflow-x:hidden;
+        height: @row-height;
+        line-height: @row-height;
+        vertical-align: middle;
+      }
+    }
+
+    .full-page{
+      position: relative;
+      width: 100%;
+      margin-top: @row-height;
+      left:0px;
+      height: calc(100% - @row-height);
+      // overflow-y: scroll;
+
+      
+      .big-list{
+        width: 100%;
+        list-style: none;
+
+        .big-item{
+          width: 100%;
+
+          .big-title{
+            @row-height:1.7rem;
+
+            width: 100%;
+            height: @row-height;//68px;
+            line-height: @row-height;
+            vertical-align: middle;
+            padding: 0px @pplr;
+            color: @tiptilecolor;
+            font-size: @tip-font-size;
+          }
+
+          .small-list{
+            background: #fff;
+
+            .samll-item{
+              position: relative;
+              width: 100%;
+              padding: 0.25rem @pplr;
+              color: #353535;
+              box-sizing: border-box;
+
+              .small-title{
+                font-size: @nfs;
+                padding: 0.25rem 0px; //10px
+              }
+
+              .small-list2{
+                .samll-item2{
+                  position: relative;
+                  font-size: 0.7rem;//28px
+                  padding: 0.25rem 0px;//10px
+                  padding-left: 28px;
+                  box-sizing: border-box;
+                  
+
+                  &::before{
+                    @iconsize:0.75rem;
+
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    background: url('../images/maintenance/iconr.png');
+                    background-size: @iconsize @iconsize;
+                    width: @iconsize;
+                    height: @iconsize;
+                  }
+                }
+              }
+
+              &:nth-child(n+2) :before{
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background: @slit-line-c;
+                background-size: 100% 1px;
+                width: 100%;
+                height: 1px;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}

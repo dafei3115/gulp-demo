@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工单列表</title>
+    <!--include "./modules/commoncss.html"-->
+</head>
+<body>
+<div class="page service">
+<!--页面内容开始-->
+    <div class="filter-option-list">
+        <div class="filter-option">
+            <a href="javascript:void(0)" class="open-device-list">设备</a>
+        </div>
+        <div class="filter-option zt">
+            工单状态
+            <div class="tab-item-select">
+                <ul>
+                    <li class="selected" data-status="全部">全部</li>
+                    <li data-status="已下单">已下单</li>
+                    <li data-status="已派工">已派工</li>
+                    <li data-status="已接单">已接单</li>
+                    <li data-status="已完工">已完工</li>
+               </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sevice-list">
+        <ul id="sevice-list-container">
+            <!-- <li>
+                <a href="service_detail.html">
+                    <div class="server-no">
+                        <span class="no">单号：2535256856874</span>
+                        <span class="szt">已下单</span>
+                    </div>
+                    <div class="device-info">
+                        <p class="device-name">设备SY16C迷你挖掘机</p>
+                        <p class="device-no">设备编号：SY021565645</p>
+                        <p class="fault-desc">故障描述：挖机不能正常工作：动作慢，冒黑烟，发动机有异响</p>
+                        <p class="add-time">下单时间：2017-06-08</p>
+                    </div>
+                </a>
+                <div class="server-end-info">
+                    <span class="end-time">完工时间：2017-06-08</span>
+                    <a href="service_comment.html" class="comment-btn">评价</a>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+    <div class="device-list">
+        <ul>
+            <li class="cur" data-id="11">
+                <img src="[@sitepath]images/service/waji.png" class="device-img">
+                <div class="text">
+                    <p class="device-name mui-ellipsis">
+                        设备SY16C迷你挖掘机设备SY16C迷你挖掘机设备SY16C迷你挖掘机设备SY16C迷你挖掘机
+                    </p>
+                    <p class="device-no mui-ellipsis">设备编号：SY021565645</p>
+                    <p class="device-addr mui-ellipsis">湖南省长沙市岳麓区岳麓大道湖南省长沙市岳麓区岳麓大道湖南省长沙市岳麓区岳麓大道</p>
+                </div>
+            </li>
+            <li data-id="12">
+                <img src="[@sitepath]images/service/waji.png" class="device-img">
+                <div class="text">
+                    <p class="device-name mui-ellipsis">
+                        设备SY16C迷你挖掘机设备SY16C迷你挖掘机设备SY16C迷你挖掘机设备SY16C迷你挖掘机
+                    </p>
+                    <p class="device-no mui-ellipsis">设备编号：SY021565645</p>
+                    <p class="device-addr mui-ellipsis">湖南省长沙市岳麓区岳麓大道湖南省长沙市岳麓区岳麓大道湖南省长沙市岳麓区岳麓大道</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="mask"></div>
+<!--页面内容结束-->
+</div>
+<!--include "./modules/commonjs.html"-->
+<script src="[@sitepath]js/service_list.min.js"></script>
+<script>
+    SERVICE_DATA.setConfig({deviceId:"",serviceStatus:"",p:1,num:20,hasNext:true,url:"[@sitepath]vendor/testData/service_list.json"});
+</script>
+</body>
+</html>
